@@ -473,8 +473,8 @@ if (isset($_GET['clear']) && $_GET['clear'] == 1) {
             border: 1px solid #cacaca;
         }
     </style>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="inc/d3-3.0.1.min.js"></script>
+    <script src="inc/jquery-1.11.0.min.js"></script>
     <script>
         var hidden = {};
         function toggleVisible(head, row) {
