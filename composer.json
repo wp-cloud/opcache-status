@@ -1,13 +1,25 @@
 {
-    "name": "rlerdorf/opcache-status",
+    "name": "wp-cloud/opcache-status",
+    "type": "application",
     "description": "A one-page opcache status page",
+    "keywords": ["opcache","cache","debug","debugging"],
+    "homepage": "https://github.com/wp-cloud/opcache-status",
     "license": "PHP-3.0",
     "authors": [
         {
-            "name": "The contributors",
+            "name": "The contributors of rlerdorf/opcache-status",
             "homepage": "https://github.com/rlerdorf/opcache-status/graphs/contributors"
+        },
+        {
+            "name": "Christian Foellmann",
+            "email": "foellmann@foe-services.de",
+            "homepage": "http://christian.foellmann.de/"
         }
     ],
+    "support": {
+        "issues": "https://github.com/wp-cloud/opcache-status/issues",
+        "source": "https://github.com/wp-cloud/opcache-status"
+    },
     "require": {
         "PHP": ">=5.5.0"
     }
