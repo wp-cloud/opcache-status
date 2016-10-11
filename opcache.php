@@ -1,4 +1,11 @@
 <?php
+/**
+ * @author    WP-Cloud <code@wp-cloud.net>
+ * @copyright Copyright (c) 2016, WP-Cloud
+ * @copyright Copyright (c) -2016, Rasmus Lerdorf
+ * @license   @todo
+ * @package   OpCacheStatus
+ */
 
 define('THOUSAND_SEPARATOR',true);
 
