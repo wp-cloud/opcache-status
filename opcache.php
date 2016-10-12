@@ -26,6 +26,8 @@ class OpCacheDataModel
     private $_status;
     private $_d3Scripts = array();
 
+    public $version = '0.1.0';
+
     public function __construct()
     {
         $this->_configuration = opcache_get_configuration();
@@ -508,6 +510,7 @@ if (isset($_GET['clear']) && $_GET['clear'] == 1) {
 
 <body>
     <div id="container">
+        <span style="float:right;font-size:small;">OPcache Status v<?php echo $dataModel->version; ?></span>
         <h1><?php echo $dataModel->getPageTitle(); ?></h1>
 
         <div class="actions">
