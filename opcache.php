@@ -13,8 +13,6 @@
  * @license @todo
  */
 
-define('THOUSAND_SEPARATOR',true);
-
 if (!extension_loaded('Zend OPcache')) {
     echo '<div style="background-color: #F2DEDE; color: #B94A48; padding: 1em;">You do not have the Zend OPcache extension loaded, sample data is being shown instead.</div>';
     require 'data-sample.php';
@@ -27,6 +25,7 @@ class OpCacheDataModel
     private $_d3Scripts = array();
 
     public $version = '0.1.0';
+    public $thousand_separator = true;
 
     public function __construct()
     {
@@ -72,7 +71,7 @@ class OpCacheDataModel
                     if ($k === 'start_time' || $k === 'last_restart_time') {
                         $v = ($v ? date(DATE_RFC822, $v) : 'never');
                     }
-                    if (THOUSAND_SEPARATOR === true && is_int($v)) {
+                    if ($this->thousand_separator === true && is_int($v)) {
                         $v = number_format($v);
                     }
 
@@ -196,7 +195,7 @@ class OpCacheDataModel
             $this->_status['opcache_statistics']['hash_restarts'],
         );
 
-        if (THOUSAND_SEPARATOR === true) {
+        if ($this->thousand_separator === true) {
             $dataset['TSEP'] = 1;
         } else {
             $dataset['TSEP'] = 0;
@@ -262,7 +261,7 @@ class OpCacheDataModel
 
     private function _format_value($value)
     {
-        if (THOUSAND_SEPARATOR === true) {
+        if ($this->thousand_separator === true) {
             return number_format($value);
         } else {
             return $value;
